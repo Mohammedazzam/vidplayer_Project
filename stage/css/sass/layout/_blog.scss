@@ -1,0 +1,51 @@
+.blog-update{
+    padding: 90px 0;
+    h5, h2{
+        color: #FFF;
+        text-transform: uppercase;
+    }
+    h2{
+        font-family: $play;
+        font-weight: bold;
+        font-size: 34px;
+        position: relative;
+        padding-bottom: 25px;
+        @media (max-width:520px){
+            font-size: 18px;
+        }
+        &.after:after{
+            left: 47% !important;
+            @media (max-width:520px){
+                left: 41% !important;
+            }
+        }
+    }
+    .carousel{
+        padding: 50px;
+        .carousel-indicators{
+            li{
+                cursor: pointer;
+                &.active{
+                    background-color: $mainColor;
+                }
+            }
+        }
+        .carousel-inner{
+            .blog-box{
+                height: 350px;
+                p , span{
+                    color: #adadad;
+                }
+                span{
+                    font-size: 13px;
+                }
+                p{
+                    margin: 20px 0;
+                    @media (max-width:520px){
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

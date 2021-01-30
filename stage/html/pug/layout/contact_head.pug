@@ -1,0 +1,91 @@
+include ../components/scrollbtn
+.contact-head.text-center
+    // Start Navbar
+    nav.navbar.navbar-expand-lg#chcolor
+        .container
+            a.navbar-brand(href='index.html') 
+                i.music.fas.fa-play.rounded-circle
+                span Vidplayer
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                h6 MENU
+                .span-container
+                    span.navbar-toggler-icon 
+                    span.navbar-toggler-icon
+                    span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse
+                ul.navbar-nav.mx-auto
+                    li.nav-item.hovering
+                        a.nav-link.nonprevent(href='index.html')
+                            | Home 
+                            span.sr-only (current)
+                    li.nav-item.hovering
+                        a.nav-link(href='#' data-scrolling="drone") About
+                    li.nav-item.hovering
+                        a.nav-link(href='#' data-scrolling="gallery") Portfolio
+                    li.nav-item.hovering
+                        a.nav-link(href='#' data-scrolling="serv") Services
+                    li.nav-item.hovering
+                        a.nav-link(href='#' data-scrolling="bloggy") Blog
+                    li.nav-item.hovering.active
+                        a.nav-link.nonprevent(href='contact.html') Contact
+            form.form-inline.my-2.my-lg-0
+                input.search-txt.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+                a(href="").search-icon.rounded-circle
+                    i.fas.fa-search.search
+    .containter
+        .contact-content
+            h1 contact us
+            p  
+                |   Home / 
+                span Contact
+section.connection
+    .container
+        .content-holder
+            .row
+                .col-sm-12.col-md-6.col-xl-4
+                    .contact-info
+                        i.fas.fa-map-marker-alt.fa-xl.rounded-circle
+                        .info-box
+                            h3 Adress
+                            p Egypt/ Daqahlia, Mansoura
+                .col-sm-12.col-md-6.col-xl-4
+                    .contact-info
+                        i.fas.fa-envelope.fa-xl.rounded-circle
+                        .info-box
+                            h3 Email
+                            p ahmedelabasy662@gmail.com
+                .col-sm-12.col-md-12.col-xl-4
+                    .contact-info
+                        i.fas.fa-phone-alt.fa-xl.rounded-circle
+                        .info-box
+                            h3 Hotline
+                            p Mobile: +20 1013810452
+        .form-holder
+            .row
+                .col-md-6.col-sm-12
+                    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798902705!2d-74.25986790365917!3d40.697670067823786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1596152431947!5m2!1sen!2sbd" width="100%" height="450" style="border: 0;")
+                .col-md-6.col-sm-12
+                    h3 Get In Touch
+                    form#form
+                        div.form-control
+                            input(type="text" name="name" placeholder="Full Name")
+                            i.fas.fa-exclamation-circle
+                            i.fas.fa-check-circle
+                            span This Field can't be Empty
+                        div.form-control
+                            input(type="email" name="name" placeholder="Email")
+                            i.fas.fa-exclamation-circle
+                            i.fas.fa-check-circle
+                            span This Field can't be Empty
+                        div.form-control
+                            input(type="password" id="pass" name="name" placeholder="Password")
+                            i.fas.fa-exclamation-circle
+                            i.fas.fa-check-circle
+                            span This Field can't be Empty
+                        div.form-control
+                            input(type="password" id="checkpass" name="name" placeholder="Confirm Password")
+                            i.fas.fa-exclamation-circle
+                            i.fas.fa-check-circle
+                            span This Field can't be Empty
+                        button Submit info
+include footer

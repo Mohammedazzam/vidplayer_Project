@@ -1,0 +1,34 @@
+// Start Navbar
+nav.navbar.navbar-expand-lg#chcolor
+    .container
+        a.navbar-brand(href='#') 
+            i.music.fas.fa-play.rounded-circle
+            span Vidplayer
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            h6 MENU
+            .span-container
+                span.navbar-toggler-icon 
+                span.navbar-toggler-icon
+                span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.mx-auto
+                block activity
+                    li.nav-item.hovering.active
+                        a.nav-link(href='index.html')
+                            | Home 
+                            span.sr-only (current)
+                li.nav-item.hovering
+                    a.nav-link(href='#' data-scrolling="drone") About
+                li.nav-item.hovering
+                    a.nav-link(href='#' data-scrolling="gallery") Portfolio
+                li.nav-item.hovering
+                    a.nav-link(href='#' data-scrolling="serv") Services
+                li.nav-item.hovering
+                    a.nav-link(href='#' data-scrolling="bloggy") Blog
+                block contact
+                    li.nav-item.hovering
+                        a.nav-link.nonprevent(href='contact.html') Contact
+        form.form-inline.my-2.my-lg-0
+            input.search-txt.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+            a(href="").search-icon.rounded-circle
+                i.fas.fa-search.search

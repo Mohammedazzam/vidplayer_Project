@@ -1,0 +1,149 @@
+.main-button{
+    background:none;
+    border: none;
+    font-family: $play;
+    color:#FFF;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 14px 32px 12px;
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        border-top: 2px solid #00bfe7;
+        border-left: 2px solid #00bfe7;
+        transition: .6s;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 30px;
+        height: 30px;
+        border-bottom: 2px solid #00bfe7;
+        border-right: 2px solid #00bfe7;
+        transition: .6s;
+    }
+    &:hover:before{
+        width: 100%;
+        height: 100%;
+    }
+    &:hover:after{
+        width: 100%;
+        height: 100%;
+    }
+}
+.navbar li.hovering{
+    @media (min-width: 991px){
+        &:after{
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 8px;
+            width: 0px;
+            height: 1px;
+            background-color: #00bfe7;
+            transition: transform .3s;
+            transform:scale(0,1);
+        }
+        &:hover:after{
+            width: calc(100% - 40px);
+            transform: scale(1,1);
+        }
+    }
+}
+.after{
+    &:after{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0px;
+            width: 65px;
+            height: 3px;
+            background-color: $mainColor;
+        }
+}
+.gradiant{
+    &:before{
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.856), transparent);
+        z-index: 2;
+        transition: .6s;
+        opacity: 0;
+    }
+    &:hover:before{
+        opacity: 1;
+    }
+}
+.text{
+    position: absolute;
+    bottom: -500px;
+    left: 50px;
+    color: #FFF;
+    z-index: 9999;
+    transition: .4s;
+    @media (max-width: 991px) {
+        left:28%;
+    }
+}
+.read{
+    background: none;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    i{
+        margin-left: 10px;
+        font-size: 10px;
+    }
+}
+.scroll-top{
+    position: fixed;
+    right: 25px;
+    bottom: 35px;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    background: none;
+    background-color: $mainColor;
+    text-align: center;
+    cursor: pointer;
+    color: #FFF;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform .5s ease-in-out;
+    &.showBtn{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    &:after{
+        position: absolute;
+        content: '';
+        width: 0%;
+        background-color: #05a9ca;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: .3s;
+    }
+    &:hover:after{
+        width: 100%;
+    }
+}
+.chcolor{
+    background-color: $mainColor;
+}
